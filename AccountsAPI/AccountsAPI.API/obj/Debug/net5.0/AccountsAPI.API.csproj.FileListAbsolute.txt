@@ -56,3 +56,7 @@
 /home/brandonavant/source/repos/WonkeyDonkeyGameReviews/AccountsAPI/AccountsAPI.API/obj/Debug/net5.0/ref/AccountsAPI.API.dll
 /home/brandonavant/source/repos/WonkeyDonkeyGameReviews/AccountsAPI/AccountsAPI.API/obj/Debug/net5.0/AccountsAPI.API.pdb
 /home/brandonavant/source/repos/WonkeyDonkeyGameReviews/AccountsAPI/AccountsAPI.API/obj/Debug/net5.0/AccountsAPI.API.genruntimeconfig.cache
+/home/brandonavant/source/repos/WonkeyDonkeyGameReviews/AccountsAPI/AccountsAPI.API/bin/Debug/net5.0/MediatR.dll
+/home/brandonavant/source/repos/WonkeyDonkeyGameReviews/AccountsAPI/AccountsAPI.API/bin/Debug/net5.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
+/home/brandonavant/source/repos/WonkeyDonkeyGameReviews/AccountsAPI/AccountsAPI.API/bin/Debug/net5.0/AccountsAPI.Application.dll
+/home/brandonavant/source/repos/WonkeyDonkeyGameReviews/AccountsAPI/AccountsAPI.API/bin/Debug/net5.0/AccountsAPI.Application.pdb

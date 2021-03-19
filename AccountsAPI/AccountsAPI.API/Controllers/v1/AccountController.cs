@@ -22,14 +22,16 @@ namespace AccountsAPI.API.Controllers
         {
             try
             {
-            var result = await _mediator.Send(new CreateAccountCommand(request));
+                var result = await _mediator.Send(new CreateAccountCommand(request));
+
+                return Ok(result);
             }
             catch (Exception ex)
             {
                 // TODO bavant: Logging
-            }
 
-            throw new NotImplementedException();
+                return new StatusCodeResult(500);
+            }            
         }
     }
 }
