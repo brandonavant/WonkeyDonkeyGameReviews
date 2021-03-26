@@ -9,10 +9,5 @@ namespace AccountsAPI.AccountsAPI.Domain.Account
         {
             
         }
-
-        public static Account Create()
-        {
-
-        }
     }
 }
