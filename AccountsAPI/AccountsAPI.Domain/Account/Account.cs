@@ -6,7 +6,7 @@ using AccountsAPI.Domain.Rules;
 namespace AccountsAPI.AccountsAPI.Domain.Account
 {
     
-    public class Account : AggregateRoot<Account, int>
+    public class Account : AggregateRoot<Account, Guid>
     {
         private Account()
         {
