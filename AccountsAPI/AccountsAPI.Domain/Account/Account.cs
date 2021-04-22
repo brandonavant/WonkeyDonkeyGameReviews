@@ -24,16 +24,24 @@ namespace AccountsAPI.AccountsAPI.Domain.Account
 
         public AccountRole Role { get; private set; }                
                                             
-        private Account()
+        private Account(Guid id, string firstName, string lastName, AccountRole role)
         {
-            
+            ApplyChange(new Events.AccountCreated
+            {
+                Id
+            })
         }
 
-        public static Account Create(string firstName, string lastName)
+        public static Account Create(Guid id, string firstName, string lastName, AccountRole role)
         {
             CheckRule(new AccountNameIsValidRule(firstName, lastName));
 
-            return new Account();
+            return new Account(firstName, lastName, role);
+        }
+
+        public void Update()
+        {
+
         }
     }
 }

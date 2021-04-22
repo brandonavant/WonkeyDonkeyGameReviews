@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using AccountsAPI.Domain.SeedWork;
 
 namespace AccountsAPI.AccountsAPI.Domain.SeedWork
@@ -8,6 +9,11 @@ namespace AccountsAPI.AccountsAPI.Domain.SeedWork
     public abstract class AggregateRoot<T, TId>
         where T : class
     {
+        /// <summary>
+        /// A list of changes to be sent to the event store.
+        /// </summary>
+        private readonly List<object> _changes;
+        
         /// <summary>
         /// Unique identifier for the Aggregate.
         /// </summary>
@@ -25,6 +31,17 @@ namespace AccountsAPI.AccountsAPI.Domain.SeedWork
         {
             
         }
+
+        protected abstract void When(object @event);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected void ApplyChange(object @event)
+        {
+            When(@event);
+            _changes.Add(@event);
+        }
         
         /// <summary>
         /// Determines whether or not a given <see cref="IBusinessRule"/> is broken.
@@ -37,5 +54,7 @@ namespace AccountsAPI.AccountsAPI.Domain.SeedWork
                 throw new BusinessRuleValidationException(rule);
             }
         }
+
+
     }
 }

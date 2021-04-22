@@ -9,6 +9,9 @@ namespace AccountsAPI.Tests.UnitTests.Domain
     public class AccountUnitTests
     {
         [Fact]
+        public void 
+
+        [Fact]
         public void Account_CreateNewAccountWithInvalidFirstName_ThrowsBusinessRuleException()
         {
             var firstName = string.Empty;
